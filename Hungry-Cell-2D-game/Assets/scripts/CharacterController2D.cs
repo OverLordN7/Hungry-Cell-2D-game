@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character_Movement : MonoBehaviour
+public class CharacterController2D: MonoBehaviour
 {
     private Rigidbody2D rb2d;
     public float speed = 10f;
@@ -27,5 +27,13 @@ public class Character_Movement : MonoBehaviour
         ymove = Input.GetAxisRaw("Vertical") * speed;
         Vector2 movement = new Vector2(xmove,ymove);
         rb2d.AddForce(movement);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Food"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
