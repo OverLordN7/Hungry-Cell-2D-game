@@ -326,6 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a98a0afb89b9d5245bc42e67a2a033e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1
   healthBar: {fileID: 1014939773}
 --- !u!4 &1039061479
 Transform:
@@ -417,6 +418,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 4751723079434402290, guid: 52c822a3c3d90ea43bab260a1b4e109c,
+        type: 3}
+      propertyPath: _healthBar
+      value: 
+      objectReference: {fileID: 1014939773}
     - target: {fileID: 4751723079434402293, guid: 52c822a3c3d90ea43bab260a1b4e109c,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -8,6 +8,7 @@ public class CharacterController2D: MonoBehaviour
     private Rigidbody2D rb2d;
     public float speed = 10f;
     public float xmove, ymove = 0f;
+    [SerializeField] private HealthBar _healthBar;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,9 @@ public class CharacterController2D: MonoBehaviour
     {
         if (other.gameObject.CompareTag("Food"))
         {
+            
             Destroy(other.gameObject);
+            _healthBar.HealHealth(0.05f);
         }
     }
 }
