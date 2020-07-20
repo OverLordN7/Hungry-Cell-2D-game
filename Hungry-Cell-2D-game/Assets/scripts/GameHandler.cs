@@ -13,6 +13,8 @@ public class GameHandler : MonoBehaviour
         healthBar.SetSize(health);
         if (healthBar.GetHealth() <= 0)
         {
+            Debug.Log("Game over");
+            
            //ToDo game over. function which stops the game and make menu
         }
         else
