@@ -36,7 +36,11 @@ public class CharacterController2D: MonoBehaviour
         {
             
             Destroy(other.gameObject);
+
+            FindObjectOfType<AudioManager>().Play("CollectFood");
+            
             _healthBar.HealHealth(0.05f);
+            
         }
     }
 }
