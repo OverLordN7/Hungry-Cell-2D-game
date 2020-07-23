@@ -11,6 +11,7 @@ public class GameHandler : MonoBehaviour
      void Start()
     {
         healthBar.SetSize(health);
+        
         if (healthBar.GetHealth() <= 0)
         {
             Debug.Log("Game over");
@@ -27,6 +28,11 @@ public class GameHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(healthBar.GetHealth());
+        if (healthBar.GetHealth() <= 0)
+        {
+            Debug.Log("Game Over!");
+            Time.timeScale = 0;
+        }
     }
 }

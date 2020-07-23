@@ -8,12 +8,16 @@ public class CharacterController2D: MonoBehaviour
     private Rigidbody2D rb2d;
     public float speed = 10f;
     public float xmove, ymove = 0f;
-    [SerializeField] private HealthBar _healthBar;
+    [SerializeField] public HealthBar _healthBar;
+    
+    
+    
 
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
@@ -36,6 +40,7 @@ public class CharacterController2D: MonoBehaviour
         {
             
             Destroy(other.gameObject);
+            Score.scoreAmount += 1;
 
             FindObjectOfType<AudioManager>().Play("CollectFood");
             
@@ -43,4 +48,6 @@ public class CharacterController2D: MonoBehaviour
             
         }
     }
+
+    
 }
