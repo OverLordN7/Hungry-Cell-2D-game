@@ -10,6 +10,7 @@ public class CharacterController2D: MonoBehaviour
     public float xmove, ymove = 0f;
     [SerializeField] public HealthBar _healthBar;
     
+    
     void Start() { rb2d = GetComponent<Rigidbody2D>();}
     
     private void FixedUpdate()
@@ -27,7 +28,7 @@ public class CharacterController2D: MonoBehaviour
             
             Destroy(other.gameObject);
             Score.scoreAmount += 1;
-
+            
             FindObjectOfType<AudioManager>().Play("CollectFood");
             
             _healthBar.HealHealth(0.05f);
