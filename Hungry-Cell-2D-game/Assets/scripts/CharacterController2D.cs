@@ -10,22 +10,8 @@ public class CharacterController2D: MonoBehaviour
     public float xmove, ymove = 0f;
     [SerializeField] public HealthBar _healthBar;
     
+    void Start() { rb2d = GetComponent<Rigidbody2D>();}
     
-    
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb2d = GetComponent<Rigidbody2D>();
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
     private void FixedUpdate()
     {
         xmove = Input.GetAxisRaw("Horizontal")* speed;
@@ -45,9 +31,7 @@ public class CharacterController2D: MonoBehaviour
             FindObjectOfType<AudioManager>().Play("CollectFood");
             
             _healthBar.HealHealth(0.05f);
-            
         }
     }
-
     
 }

@@ -10,7 +10,6 @@ public class borders : MonoBehaviour
 
     private float objectHeight;
     
-    // Start is called before the first frame update
     void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width,
@@ -19,8 +18,6 @@ public class borders : MonoBehaviour
         objectWidth = transform.GetComponent<SpriteRenderer>().bounds.size.x /2;
         objectHeight = transform.GetComponent<SpriteRenderer>().bounds.size.y /2;
     }
-
-    // Update is called once per frame
     void LateUpdate()
     {
         Vector3 viewPos = transform.position;

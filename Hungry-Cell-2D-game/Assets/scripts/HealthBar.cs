@@ -8,7 +8,6 @@ public class HealthBar : MonoBehaviour
     private float health = 1.0f;
     
     private Transform bar;
-    // Start is called before the first frame update
     private void Awake()
     {
         bar = transform.Find("Bar");

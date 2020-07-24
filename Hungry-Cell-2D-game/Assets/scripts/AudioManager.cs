@@ -10,7 +10,6 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
     void Awake()
     {
-
         if (instance == null)
         {
             instance = this;
@@ -45,10 +44,5 @@ public class AudioManager : MonoBehaviour
     {
         Play("MainSound");
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
