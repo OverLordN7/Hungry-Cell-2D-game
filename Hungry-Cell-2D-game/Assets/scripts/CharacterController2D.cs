@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class CharacterController2D: MonoBehaviour
@@ -9,6 +10,11 @@ public class CharacterController2D: MonoBehaviour
     public float speed = 10f;
     public float xmove, ymove = 0f;
     [SerializeField] public HealthBar _healthBar;
+
+    [SerializeField] private Joystick joystick;
+    private float angleOffset = 90f;
+    public float adaptiveSpeed = 20f;
+    
     
     
     void Start() { rb2d = GetComponent<Rigidbody2D>();}
@@ -34,5 +40,15 @@ public class CharacterController2D: MonoBehaviour
             _healthBar.HealHealth(0.05f);
         }
     }
-    
+
+    private void Update()
+    {
+        if (joystick.speed > 0.0f)
+        {
+            Vector2 direction = joystick.direction;
+            float angle = Mathf.Atan2(direction.y, direction.x)*Mathf.Rad2Deg;
+            transform.rotation = quaternion.Euler(0.0f,0.0f,angle+ angleOffset);
+            transform.Translate(direction * adaptiveSpeed * joystick.speed * Time.deltaTime,Space.World);
+        }
+    }
 }
