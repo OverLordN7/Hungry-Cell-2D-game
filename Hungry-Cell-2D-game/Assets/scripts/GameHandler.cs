@@ -15,18 +15,5 @@ public class GameHandler : MonoBehaviour
         StartCoroutine(healthBar.DamageOverTime(0.05f));
     }
      
-    void Update()
-    {
-        if (healthBar.GetHealth() <= 0)
-        {
-            Time.timeScale = 0;
-            Restart();
-        }
-    }
     
-    void Restart()
-    {
-        SceneManager.LoadScene("Main");
-        Time.timeScale = 1;
-    }
 }
