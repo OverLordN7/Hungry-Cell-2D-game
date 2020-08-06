@@ -489,6 +489,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499037297}
   m_CullTransparentMesh: 0
+--- !u!1001 &514466958
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7120029721903723520, guid: 0db8a5403dc860e46aa5d60adf20285c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.165249
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120029721903723520, guid: 0db8a5403dc860e46aa5d60adf20285c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8508713
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120029721903723520, guid: 0db8a5403dc860e46aa5d60adf20285c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11.714844
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120029721903723520, guid: 0db8a5403dc860e46aa5d60adf20285c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120029721903723520, guid: 0db8a5403dc860e46aa5d60adf20285c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120029721903723520, guid: 0db8a5403dc860e46aa5d60adf20285c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120029721903723520, guid: 0db8a5403dc860e46aa5d60adf20285c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120029721903723520, guid: 0db8a5403dc860e46aa5d60adf20285c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120029721903723520, guid: 0db8a5403dc860e46aa5d60adf20285c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120029721903723520, guid: 0db8a5403dc860e46aa5d60adf20285c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120029721903723520, guid: 0db8a5403dc860e46aa5d60adf20285c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120029721903723522, guid: 0db8a5403dc860e46aa5d60adf20285c,
+        type: 3}
+      propertyPath: m_Name
+      value: PoisonSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120029721903723523, guid: 0db8a5403dc860e46aa5d60adf20285c,
+        type: 3}
+      propertyPath: foodPrefab
+      value: 
+      objectReference: {fileID: 4362772945466588494, guid: 41c45744aa4a89b42be6291f5512eea1,
+        type: 3}
+    - target: {fileID: 7120029721903723523, guid: 0db8a5403dc860e46aa5d60adf20285c,
+        type: 3}
+      propertyPath: respawnTime
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0db8a5403dc860e46aa5d60adf20285c, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,7 +814,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 953287670}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1439094578}
+        m_MethodName: BackToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &953287670
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -39,6 +39,16 @@ public class CharacterController2D: MonoBehaviour
             
             _healthBar.HealHealth(0.05f);
         }
+        if (other.gameObject.CompareTag("Poison"))
+        {
+            
+            Destroy(other.gameObject);
+            Score.scoreAmount += 1;
+            
+            FindObjectOfType<AudioManager>().Play("CollectFood");
+            
+            _healthBar.DamageHealth(0.1f);
+        }
     }
 
     private void Update()

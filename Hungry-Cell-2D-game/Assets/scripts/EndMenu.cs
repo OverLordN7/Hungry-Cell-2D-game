@@ -47,5 +47,10 @@ public class EndMenu : MonoBehaviour
         Time.timeScale = 0f;
         gameIsOver = true;
     }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
     
 }

@@ -32,6 +32,15 @@ public class HealthBar : MonoBehaviour
         }
 
     }
+    public void DamageHealth(float damage)
+    {
+        if (health >0.0f)
+        {
+            health -= damage;
+            bar.localScale=new Vector3(health,1f); 
+        }
+
+    }
 
     public float GetHealth()
     {
