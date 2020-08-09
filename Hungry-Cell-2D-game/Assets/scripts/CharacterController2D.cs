@@ -45,7 +45,7 @@ public class CharacterController2D: MonoBehaviour
             Destroy(other.gameObject);
             Score.scoreAmount += 1;
             
-            FindObjectOfType<AudioManager>().Play("CollectFood");
+            FindObjectOfType<AudioManager>().Play("poison");
             
             _healthBar.DamageHealth(0.1f);
         }
