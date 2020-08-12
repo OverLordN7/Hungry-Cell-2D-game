@@ -43,12 +43,6 @@ public class EndMenu : MonoBehaviour
         gameIsOver = false;
     }
     
-    void End()
-    {
-        endMenu.SetActive(true);
-        Time.timeScale = 0f;
-        gameIsOver = true;
-    }
 
     public void BackToMenu()
     {
