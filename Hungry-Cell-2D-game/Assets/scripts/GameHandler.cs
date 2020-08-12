@@ -1,19 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
-    [SerializeField] private float health = 1.0f;
+    public int maxHealth = 100;
+     public int currentHealth;
 
-    [SerializeField] private HealthBar healthBar;
+     public HealthBarScript _HealthBarScripts;
     
      void Start()
-    {
-        healthBar.SetSize(health);
-        StartCoroutine(healthBar.DamageOverTime(0.05f));
-    }
+     {
+         currentHealth = maxHealth;
+         _HealthBarScripts.SetMaxHealth(maxHealth);
+         StartCoroutine(_HealthBarScripts.DamageOverTime(10f));
+     }
      
-    
+     public void TakeDamage(int damage) { _HealthBarScripts.ReduceHealth(damage); }
+     public void TakeHeal(int heal) { _HealthBarScripts.IncreaseHealth(heal); }
+
+     public int GetHealth() { return currentHealth; }
 }

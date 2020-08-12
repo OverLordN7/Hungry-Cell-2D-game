@@ -6,14 +6,16 @@ using UnityEngine.SceneManagement;
 public class EndMenu : MonoBehaviour
 {
     public GameObject endMenu;
-    [SerializeField] private HealthBar healthBar;
+    
+    //responsible for scaninng health status
+    public HealthBarScript _HealthBarScripts;
+    
     public static bool gameIsOver = false;
 
    
     void Update()
     {
-        
-        if (healthBar.GetHealth() <= 0)
+        if (_HealthBarScripts.GetHealth() <= 0)
         {
             Pause();
         }

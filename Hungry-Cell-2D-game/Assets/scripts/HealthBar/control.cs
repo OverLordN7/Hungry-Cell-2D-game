@@ -14,6 +14,7 @@ public class control : MonoBehaviour
     {
         currentHealth = maxHealth;
         _HealthBarScripts.SetMaxHealth(maxHealth);
+        StartCoroutine(_HealthBarScripts.DamageOverTime(5f));
         
     }
     
@@ -21,7 +22,8 @@ public class control : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            TakeDamage(20);
+            //TakeDamage(20);
+            TakeHeal(20);
         }
     }
 
@@ -29,6 +31,11 @@ public class control : MonoBehaviour
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        _HealthBarScripts.SetHealth(currentHealth);
+    }
+    void TakeHeal(int heal)
+    {
+        currentHealth += heal;
         _HealthBarScripts.SetHealth(currentHealth);
     }
 }
