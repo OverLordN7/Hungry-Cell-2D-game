@@ -26,6 +26,14 @@ namespace CharacterActions
                 FindObjectOfType<AudioManager>().Play("poison");
                 gameHandler.TakeDamage(10);
             }
+            
+            if (other.gameObject.CompareTag("HealthBoost"))
+            {
+                Destroy(other.gameObject);
+                Score.scoreAmount += 1;
+                FindObjectOfType<AudioManager>().Play("CollectFood");
+                gameHandler.TakeHeal(30);
+            }
         }
     }
 }

@@ -31,10 +31,16 @@ public class CharacterMovement : MonoBehaviour
     {
         if (joystick.speed > 0.0f)
         {
+            
             Vector2 direction = joystick.direction;
             float angle = Mathf.Atan2(direction.y, direction.x)*Mathf.Rad2Deg;
             transform.rotation = quaternion.Euler(0.0f,0.0f,angle+ angleOffset);
-            transform.Translate(direction * adaptiveSpeed * joystick.speed * Time.deltaTime,Space.World);
+            transform.Translate(direction * (adaptiveSpeed * joystick.speed * Time.deltaTime),Space.World);
+            
+            
         }
     }
+    
+    
+   
 }
